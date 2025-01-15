@@ -1,0 +1,151 @@
+import styled from "styled-components";
+
+
+export const NavLinksStyled = styled.nav`
+    font-size: 24px;
+    line-height: 56px;
+    color: ${(p) => p.theme.color.logo_green_color};
+    padding: 30px 0 30px 0;
+    border-bottom: 1px solid ${(p) => p.theme.color.logo_green_color};
+
+    @media screen and (min-width: 768px){
+        padding: 0;
+        border-bottom: none;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @media screen and (min-width: 1280px){
+        flex-direction: row;
+        gap: 40px;
+    }
+
+
+    & .navigation-list{
+        width: 100%;
+        @media screen and (min-width: 768px){
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        @media screen and (min-width: 1280px){
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        & .navigation-item{
+            width: 100%;
+            text-align: center;
+            transition: color ${p => p.theme.transition.main_transition};
+            position: relative;
+
+
+            @media screen and (min-width: 768px){
+                width: auto;
+            }
+
+            
+            &:hover{
+                color: ${(p) => p.theme.color.hover_color};
+            }
+
+            
+            &:after{
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                background-color: ${p => p.theme.color.hover_color};
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform ${p => p.theme.transition.main_transition}; 
+            }
+
+            &:focus::after,
+            &:hover::after {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+
+            & .nav-link{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .adress{
+        @media screen and (max-width: 767px){
+            display: none;
+        }
+        width: 100%;
+        font-style: normal;
+
+        .adress-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .adress-item{
+            width: 45%;
+        }
+
+        .tel-link{
+            display: block;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            border-radius: 10px;
+            outline: 1px solid ${(p) => p.theme.color.logo_green_color};
+            outline-offset: -1px;
+            color: ${(p) => p.theme.color.body_bg_color};
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: color ${p => p.theme.transition.main_transition},
+                    outline ${p => p.theme.transition.main_transition};
+
+            & .phone-icon{
+                width: 12px;
+                height: 12px;
+                fill: ${(p) => p.theme.color.body_bg_color};
+                rotate: 25deg;
+                transition: fill ${p => p.theme.transition.main_transition};
+            }
+
+            @media screen and (min-width: 1280px){
+                padding: 10px;
+                line-height: 18px;
+            }
+
+            &:hover{
+                color: ${(p) => p.theme.color.hover_color};
+                outline: 1px solid ${(p) => p.theme.color.hover_color};
+                
+                .phone-icon{
+                    fill: ${(p) => p.theme.color.hover_color};
+                }
+            }
+            
+
+        }
+
+    }
+
+`
