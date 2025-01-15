@@ -6,7 +6,11 @@ export const HeroSection = () => {
 
     return(
         <HeroStyled>
-            <h1>ITS A HERO SECTION</h1>
+            <div className="title-cont">
+                <h1>Garden Management in Israel</h1>
+                <span></span>
+                <p>Our gardener will provide professional care for every garden</p>
+            </div>
         </HeroStyled>
     )
 };
