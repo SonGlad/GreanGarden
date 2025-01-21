@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/GreanGarden/static/css/main.db317afe.css",
-    "main.js": "/GreanGarden/static/js/main.44999d85.js",
+    "main.js": "/GreanGarden/static/js/main.4459449c.js",
+    "static/media/fog.png": "/GreanGarden/static/media/fog.d4430bf9c58356ebba20.png",
+    "static/media/Subtract.png": "/GreanGarden/static/media/Subtract.b806eb2db01001f24beb.png",
     "static/media/Logo2.png": "/GreanGarden/static/media/Logo2.bdd1b9468fd6d72311fe.png",
     "static/media/phone.svg": "/GreanGarden/static/media/phone.e2a149fd7192f16303909e13c08d58a2.svg",
-    "static/media/whatsApp.svg": "/GreanGarden/static/media/whatsApp.123f28892cd5d6b0f8cfa020cfcc00bf.svg",
     "index.html": "/GreanGarden/index.html",
+    "static/media/arrowDown.svg": "/GreanGarden/static/media/arrowDown.46b6663e9acd336f61777b2ee19ff752.svg",
     "static/media/close.svg": "/GreanGarden/static/media/close.9cb1a87627ef012af4a24f1b68fb9e45.svg",
-    "static/media/arrowDown.svg": "/GreanGarden/static/media/arrowDown.5869051196f1b71f58cd0a6b0497dea4.svg",
     "static/media/burger.svg": "/GreanGarden/static/media/burger.fcd5f642cf7711d65bdfd48c01690f8b.svg",
     "main.db317afe.css.map": "/GreanGarden/static/css/main.db317afe.css.map",
-    "main.44999d85.js.map": "/GreanGarden/static/js/main.44999d85.js.map"
+    "main.4459449c.js.map": "/GreanGarden/static/js/main.4459449c.js.map"
   },
   "entrypoints": [
     "static/css/main.db317afe.css",
-    "static/js/main.44999d85.js"
+    "static/js/main.4459449c.js"
   ]
 }
