@@ -5,7 +5,7 @@ import FogBackgroundImage from '../../images/images/fog.png';
 
 
 export const HeroStyled = styled.div`
-    height: calc(100dvh - 88px);
+    height: calc(100vh - 88px);
     position: absolute;
     z-index: 1;
     overflow: hidden;
@@ -15,9 +15,13 @@ export const HeroStyled = styled.div`
     background-repeat: no-repeat;
     width: 100%;
     left: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+
 
     @media screen and (min-width: 1280px){
-        height: calc(100dvh - 96px); 
+        height: calc(100vh - 96px); 
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -26,7 +30,7 @@ export const HeroStyled = styled.div`
 
     .fog-div {
         width: 100%;
-        height: calc(100dvh - 88px);
+        height: calc(100vh - 88px);
         position: absolute;
         top: 0;
         left: 0;
@@ -36,7 +40,12 @@ export const HeroStyled = styled.div`
         background-position: bottom;
         z-index: 2;
         pointer-events: none;
+        overflow: hidden;
 
+
+        @media screen and (min-width: 1280px){
+            height: calc(100vh - 96px);  
+        }
 
         -webkit-mask-image: 
             linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%),
@@ -49,22 +58,19 @@ export const HeroStyled = styled.div`
         mask-composite: intersect;
         animation: fogRise 15s linear infinite;
 
-        @media screen and (min-width: 1280px){
-            height: calc(100dvh - 96px);  
-        }
     }
 
     @keyframes fogRise {
         0% {
-            background-position-y: -30%;
-            opacity: 0;
+            transform: translateY(100%);
+            opacity: 1;
         }
         50% {
-            background-position-y: 20%;
+            transform: translateY(50%);
             opacity: 1;
         }
         100% {
-            background-position-y: 70%;
+            transform: translateY(0%);
             opacity: 0;
         }
     }
