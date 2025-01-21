@@ -4,18 +4,19 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
     background-color: ${(props) => props.theme.color.header_bg_color};
     position: fixed;
+    z-index: 100;
     width: 100%;
     transition: all ${(p) => p.theme.transition.main_transition};
 
     ${(props) => props.$isScrolled &&
     `
-      background-color: #142515ed;
+      background-color: #142515ba;
       backdrop-filter: blur(10px);
     `}
 
 
     .header-container{
-        padding: 20px 0 20px 0;
+        padding: 16px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -25,6 +26,10 @@ export const HeaderStyled = styled.header`
     .header-logo{
         width: 60px;
         cursor: pointer;
+
+        @media screen and (min-width: 1280px){
+            width: 80px;
+        }
     }
 
     .desctop-menu{
@@ -34,7 +39,7 @@ export const HeaderStyled = styled.header`
         margin-left: auto;
 
         @media screen and (min-width: 1280px){
-            margin-right: 40px;
+            margin-right: 32px;
             width: 100%;
         }
     }
@@ -54,7 +59,11 @@ export const HeaderStyled = styled.header`
         }
 
         & .lang-text{
-            font-size: 1rem;
+            font-size: 14px;
+            
+            @media screen and (min-width: 1280px){
+                font-size: 20px;
+            }
         }
 
         & .lang-button{
@@ -63,20 +72,35 @@ export const HeaderStyled = styled.header`
             justify-content: center;
             gap: 5px;
             padding: 5px;
-            border-radius: 10px;
+            border-radius: 15px;
             background-color: transparent;
-            /* background-color: ${(props) => props.theme.color.header_bg_color}; */
-            color: ${(p) => p.theme.color.logo_green_color};
-            transition: background-color ${(p) => p.theme.transition.main_transition};
+            font-size: 20px;
+            border: 1px solid ${(p) => p.theme.color.text_color1};
+            color: ${(p) => p.theme.color.text_color1};
+            transition: background-color ${(p) => p.theme.transition.main_transition},
+                        border ${(p) => p.theme.transition.main_transition};
 
             &:hover{
-                background-color: ${(props) => props.theme.color.hover_color};
+                color: ${(props) => props.theme.color.hover_color};
+                border: 1px solid ${(p) => p.theme.color.hover_color};
             }
 
             & .arrow-svg{
-                fill: ${(p) => p.theme.color.logo_green_color};
+                fill: ${(p) => p.theme.color.text_color1};
                 rotate: 0deg;
                 transition: rotate ${(p) => p.theme.transition.main_transition};
+                width: 16px;
+                height: 16px;
+
+                @media screen and (min-width: 1280px){
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            @media screen and (min-width: 1280px){
+                padding: 10px 8px;
+                line-height: 22px;
             }
         }
 
@@ -84,26 +108,40 @@ export const HeaderStyled = styled.header`
             position: absolute;
             top: 100%;
             width: 100%;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
             overflow: hidden;
             transform: scale(0);
             transform-origin: left top;
             transition: transform ${p => p.theme.transition.main_transition};
+            font-size: 14px;
 
             
             & .lang-drop-item{
                 padding: 5px;
                 width: 100%;
                 background-color: ${(props) => props.theme.color.header_bg_color};
-                color: ${(p) => p.theme.color.logo_green_color};
-                border-top: 1px solid ${(p) => p.theme.color.logo_green_color};
+                color: ${(p) => p.theme.color.text_color1};
                 transition: background-color ${(p) => p.theme.transition.main_transition};
                 cursor: pointer;
                 
                 &:hover{
-                    background-color: ${(props) => props.theme.color.hover_color};
+                    color: ${(props) => props.theme.color.hover_color};
+                    background-color: ${(props) => props.theme.color.hover_color2};
                 }
+    
+                &:last-child{
+                    border-top: 1px solid ${(p) => p.theme.color.text_color1};
+                }
+
+                @media screen and (min-width: 1280px){
+                    padding: 10px 8px;
+                }
+            }
+
+            @media screen and (min-width: 1280px){
+                font-size: 20px;
+                line-height: 22px
             }
         }
 
@@ -139,7 +177,7 @@ export const HeaderStyled = styled.header`
     .burger-svg{
         width: 2.25rem;
         height: 2.25rem;
-        fill: ${(props) => props.theme.color.logo_green_color};
+        fill: ${(props) => props.theme.color.text_color1};
     }
 
 
@@ -171,7 +209,7 @@ export const HeaderStyled = styled.header`
             background-color: transparent;
     
             & .close-svg{
-                fill: ${(props) => props.theme.color.logo_green_color};
+                fill: ${(props) => props.theme.color.text_color1};
                 width: 24px;
                 height: 24px;
             }
@@ -186,7 +224,7 @@ export const HeaderStyled = styled.header`
         position: relative;
         width: 100%;
         padding-bottom: 20px;
-        border-bottom: 1px solid ${(p) => p.theme.color.logo_green_color};
+        border-bottom: 1px solid ${(p) => p.theme.color.text_color1};
     }
 
     .menu-description{
@@ -197,7 +235,7 @@ export const HeaderStyled = styled.header`
         font-size: 16px;
         max-width: 210px;
         line-height: 24px;
-        color: ${(p) => p.theme.color.logo_green_color};
+        color: ${(p) => p.theme.color.text_color1};
     }
 
 `

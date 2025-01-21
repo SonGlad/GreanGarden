@@ -1,10 +1,12 @@
 export const theme = {
     color: {
         header_bg_color: '#142515',
-        body_bg_color:'#ededed',
-        text_color: '#000000',
+        body_bg_color:'#FCFFF9',
+        text_color1: '#FFF',
+        text_color2: '#142515',
         logo_green_color: "#e7ffcb",
-        hover_color: "#a96438",
+        hover_color: "#e7ffcb",
+        hover_color2: '#000',
         active_color: "#060402",
     },
 

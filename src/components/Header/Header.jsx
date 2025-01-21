@@ -127,7 +127,7 @@ export const Header = forwardRef(({
                             onClick={toggleLangMenuOpen}
                         >
                             <p className="lang-text">{langValue}</p>
-                            <ArrowDown className="arrow-svg" width={18} height={18}/>
+                            <ArrowDown className="arrow-svg" width={16} height={16}/>
                         </button>
                         <ul className={`lang-drop-list ${toggleLangMenu()}`}>
                             {langArray.filter(({ lang }) => lang !== langValue).map(({lang}, index) => (

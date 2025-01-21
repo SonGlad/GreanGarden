@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const NavLinksStyled = styled.nav`
     font-size: 24px;
     line-height: 56px;
-    color: ${(p) => p.theme.color.logo_green_color};
+    color: ${(p) => p.theme.color.text_color1};
     padding: 30px 0 30px 0;
-    border-bottom: 1px solid ${(p) => p.theme.color.logo_green_color};
+    border-bottom: 1px solid ${(p) => p.theme.color.text_color1};
 
     @media screen and (min-width: 768px){
         padding: 0;
@@ -22,7 +22,7 @@ export const NavLinksStyled = styled.nav`
 
     @media screen and (min-width: 1280px){
         flex-direction: row;
-        gap: 40px;
+        gap: 48px;
     }
 
 
@@ -37,8 +37,12 @@ export const NavLinksStyled = styled.nav`
         }
 
         @media screen and (min-width: 1280px){
-            width: 100%;
+            gap: 24px;
+            width: fit-content;
             justify-content: flex-end;
+            font-weight: 400;
+            font-size: 24px;
+            margin-left: auto;
         }
 
         & .navigation-item{
@@ -90,27 +94,40 @@ export const NavLinksStyled = styled.nav`
         width: 100%;
         font-style: normal;
 
+        @media screen and (min-width: 1280px){
+            width: fit-content;
+        }
+
         .adress-list{
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
+
+            
+            @media screen and (min-width: 1280px){
+                justify-content: flex-end;
+                gap: 32px;
+            }
         }
 
         .adress-item{
-            width: 45%;
+
+            @media screen and (max-with: 1279px){
+                width: 45%;   
+            }
         }
 
         .tel-link{
             display: block;
-            padding: 5px;
             width: 100%;
             text-align: center;
             text-decoration: none;
             font-weight: 500;
             font-size: 14px;
-            line-height: 14px;
-            border-radius: 10px;
-            outline: 1px solid ${(p) => p.theme.color.logo_green_color};
+            line-height: 16px;
+            border-radius: 20px;
+            padding: 5px 10px;
+            outline: 1px solid ${(p) => p.theme.color.text_color1};
             outline-offset: -1px;
             color: ${(p) => p.theme.color.body_bg_color};
             background-color: transparent;
@@ -130,8 +147,17 @@ export const NavLinksStyled = styled.nav`
             }
 
             @media screen and (min-width: 1280px){
-                padding: 10px;
-                line-height: 18px;
+                padding: 10px 15px;
+                line-height: 24px;
+                font-size: 20px;
+                border-radius: 30px;
+                width: fit-content;
+
+
+                & .phone-icon{
+                    width: 16px;
+                    height: 16px;
+                }
             }
 
             &:hover{

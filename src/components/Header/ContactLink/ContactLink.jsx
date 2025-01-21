@@ -1,5 +1,4 @@
 import { ContactLinkStyled } from "./ContactLink.styled";
-import {ReactComponent as WhatsAppIcon} from "../../../images/svg/whatsApp.svg";
 
 
 export const ContactLink = () => {
@@ -16,8 +15,7 @@ export const ContactLink = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                <WhatsAppIcon className="whatsapp-icon" width={16} height={16}/>
-                <span>CONTACT US</span>  
+                <span>Contact us</span>  
             </a>
         </ContactLinkStyled>
     );

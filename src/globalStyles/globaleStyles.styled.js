@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         font-family: "Rubik", sans-serif;
         font-weight: 400;
-        letter-spacing: 0.02em;
-        color: ${(props) => props.theme.color.text_color};
+        letter-spacing: 0;
+        color: ${(props) => props.theme.color.text_color1};
         background-color: ${(props) => props.theme.color.body_bg_color};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
