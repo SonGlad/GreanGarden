@@ -134,12 +134,14 @@ export const HeroStyled = styled.div`
         margin-left: 10px;
         margin-right: 10px;
         text-align: center;
+        margin-bottom: 155px;
 
 
         @media screen and (min-width: 1280px){
             margin-top: 24px;
             margin-left: 140px;
             margin-right: 0;
+            margin-bottom: 0;
         }
     }
     
