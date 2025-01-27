@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GreanGarden/static/css/main.db317afe.css",
-    "main.js": "/GreanGarden/static/js/main.9aba01c0.js",
+    "main.js": "/GreanGarden/static/js/main.651c50a4.js",
     "static/media/fog.png": "/GreanGarden/static/media/fog.d4430bf9c58356ebba20.png",
     "static/media/Subtract.png": "/GreanGarden/static/media/Subtract.b806eb2db01001f24beb.png",
     "static/media/picture2.jpg": "/GreanGarden/static/media/picture2.8aec0bb8a16c069af45c.jpg",
@@ -9,10 +9,13 @@
     "static/media/picture3.jpg": "/GreanGarden/static/media/picture3.e94eaf38c2940ceec025.jpg",
     "static/media/svg-back1.png": "/GreanGarden/static/media/svg-back1.2bdfda2068c9bb004d27.png",
     "static/media/Logo2.png": "/GreanGarden/static/media/Logo2.bdd1b9468fd6d72311fe.png",
+    "static/media/picture7.jpg": "/GreanGarden/static/media/picture7.b1d57507dfb4dd9fdcb4.jpg",
     "static/media/picture5.jpg": "/GreanGarden/static/media/picture5.493156009ca985013090.jpg",
     "static/media/picture6.jpg": "/GreanGarden/static/media/picture6.c22502880f6d81e94be0.jpg",
     "static/media/svg-back2.png": "/GreanGarden/static/media/svg-back2.6dd05d812a635fa8a99d.png",
     "static/media/picture4.jpg": "/GreanGarden/static/media/picture4.4c5898ce12d16250b873.jpg",
+    "static/media/svg-back3.svg": "/GreanGarden/static/media/svg-back3.448aeb4ddc13db5727474eb5699e964e.svg",
+    "static/media/about-decr-svg.svg": "/GreanGarden/static/media/about-decr-svg.87badeb1f408ea3f3667c865cb7e89d6.svg",
     "static/media/picture6_svg.svg": "/GreanGarden/static/media/picture6_svg.e80a6643a8e847238d070b458f396600.svg",
     "static/media/picture1_svg.svg": "/GreanGarden/static/media/picture1_svg.dd1c7ced6dc0f3e8615caa2f93e82c92.svg",
     "static/media/picture2_svg.svg": "/GreanGarden/static/media/picture2_svg.6bedad8435173277856e3003a221ec07.svg",
@@ -25,10 +28,10 @@
     "static/media/close.svg": "/GreanGarden/static/media/close.9cb1a87627ef012af4a24f1b68fb9e45.svg",
     "static/media/burger.svg": "/GreanGarden/static/media/burger.fcd5f642cf7711d65bdfd48c01690f8b.svg",
     "main.db317afe.css.map": "/GreanGarden/static/css/main.db317afe.css.map",
-    "main.9aba01c0.js.map": "/GreanGarden/static/js/main.9aba01c0.js.map"
+    "main.651c50a4.js.map": "/GreanGarden/static/js/main.651c50a4.js.map"
   },
   "entrypoints": [
     "static/css/main.db317afe.css",
-    "static/js/main.9aba01c0.js"
+    "static/js/main.651c50a4.js"
   ]
 }
