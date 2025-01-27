@@ -4,7 +4,7 @@ import {
     AboutSectionStyled, 
     WorksSectionStyled,
     ContactSectionStyled, 
-    SectionStyled 
+    SectionStyled, 
 } from './Section.styled';
 import { forwardRef } from 'react';
 

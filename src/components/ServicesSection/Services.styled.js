@@ -4,13 +4,14 @@ import styled from "styled-components";
 
 export const ServicesStyled = styled.div`
     padding-top: 60px; 
+    padding-bottom: 154px;
 
     @media screen and (min-width: 768px){
         padding-top: 90px; 
     }
 
     @media screen and (min-width: 1280px){
-        padding-top: 120px; 
+        padding-top: 120px;
     }
 
 
@@ -63,52 +64,44 @@ export const ServicesStyled = styled.div`
 
     .services-svg-background{
         color: ${p => p.theme.color.text_color2};
+        position: relative;
 
         & .services-svg-background-one{
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+
             margin-top: 12px;
             height: auto;
             position: absolute;
             z-index: -1;
-            right: 0;
+            right: -4.5%;
+            width: 63.5%;
+
 
             & .services-svg-background-one-img{
+                width: 100%;
                 height: auto;   
-
-                @media screen and (min-width: 768px){
-                    width: calc(744 / 1280 * 100vw);
-                }
-
-                @media screen and (min-width: 768px){
-                    max-width: 744px;
-                }
             }
 
         }
 
         & .services-svg-background-two{
-            margin-top: 2350px;
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+
             height: auto;
             position: absolute;
             z-index: -1;
-            left: 0;
-
-                            
-            @media screen and (min-width: 768px){
-                margin-top: 785px;
-            }
+            left: -4%;
+            bottom: -11%;
+            width: 34%;
 
 
-            
             & .services-svg-background-two-img{
+                width: 100%;
                 height: auto;
-
-                @media screen and (min-width: 768px){
-                    width: calc(407/ 1280 * 100vw);
-                }
-
-                @media screen and (min-width: 1280px){
-                    max-width: 407px;
-                }
             }
 
         }
@@ -118,7 +111,6 @@ export const ServicesStyled = styled.div`
     .services-list{
         padding-top: 90px;
         position: relative;
-        margin-bottom: 154px;
         
         
         @media screen and (min-width: 768px){

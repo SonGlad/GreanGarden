@@ -15,30 +15,23 @@ export const HeroSectionStyled = styled.section`
 
 export const ServicesSectionStyled = styled.section`
     width: 100%;
-    position: relative;
-    /* height: 1000px; */
-    /* background-color: aqua; */
-
 `
 
 export const AboutSectionStyled = styled.section`
     width: 100%;
-    /* height: 1000px; */
-    background-color: blue;
-
 `
 
 export const WorksSectionStyled = styled.section`
     width: 100%;
     /* height: 1000px; */
-    /* background-color: red; */
+    background-color: red;
 
 `
 
 export const ContactSectionStyled = styled.section`
     width: 100%;
     /* height: 1000px; */
-    /* background-color: orange; */
+    background-color: orange;
 
 `
 

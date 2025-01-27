@@ -5,7 +5,7 @@ import FogBackgroundImage from '../../images/images/fog.png';
 
 
 export const HeroStyled = styled.div`
-    height: calc(100vh - 88px);
+    min-height: calc(100dvh - 88px);
     position: absolute;
     z-index: 1;
     overflow: hidden;
@@ -18,19 +18,20 @@ export const HeroStyled = styled.div`
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     overflow: hidden;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    
+    
     @media screen and (min-width: 1280px){
-        height: calc(100vh - 96px); 
-        display: flex;
+        min-height: calc(100vh - 96px); 
         align-items: flex-start;
-        justify-content: center;
-        flex-direction: column; 
     }
 
     .fog-div {
         width: 100%;
-        height: calc(100vh - 88px);
+        height: calc(100dvh - 88px);
         position: absolute;
         top: 0;
         left: 0;
@@ -83,7 +84,6 @@ export const HeroStyled = styled.div`
         padding: 43px 24px;
         margin-left: 10px;
         margin-right: 10px;
-        margin-top: 180px;
 
         @media screen and (min-width: 780px){
             margin-left: auto;
@@ -93,7 +93,6 @@ export const HeroStyled = styled.div`
         
         @media screen and (min-width: 1280px){
             max-width: none;
-            margin-top: 0px;
             margin-left: 140px;
             margin-right: 0;
         }
@@ -131,17 +130,21 @@ export const HeroStyled = styled.div`
 
     .contact-link-cont{
         margin-top: 40px;
-        margin-left: 10px;
-        margin-right: 10px;
         text-align: center;
-        margin-bottom: 155px;
+        width: 50%;
+
+        @media screen and (min-width: 768px){
+            max-width: 50%;
+        }
 
 
         @media screen and (min-width: 1280px){
+            max-width: none;
             margin-top: 24px;
             margin-left: 140px;
             margin-right: 0;
             margin-bottom: 0;
+            width: fit-content;
         }
     }
     
@@ -156,9 +159,6 @@ export const HeroStyled = styled.div`
         font-weight: 500;
         font-size: 20px;
         line-height: 14px;
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
         transition: color ${p => p.theme.transition.main_transition},
                     background-color ${p => p.theme.transition.main_transition},
                     outline ${p => p.theme.transition.main_transition};
@@ -166,7 +166,6 @@ export const HeroStyled = styled.div`
         @media screen and (min-width: 768px){
             text-align: center;
             text-decoration: none;
-            max-width: 50%;
         }
 
         @media screen and (min-width: 1280px){
@@ -174,8 +173,6 @@ export const HeroStyled = styled.div`
             font-weight: 500;
             padding: 12px 90px;
             border-radius: 30px;
-            max-width: none;
-            width: fit-content;
         }  
 
         &:hover{
