@@ -6,6 +6,7 @@ export const AboutStyled = styled.div`
     padding-bottom: calc(460px - (100vw - 460px));
 
 
+
     @media screen and (min-width: 768px){
         padding-bottom: calc(380px - ((100vw - 768px) * 0.3));
     }
@@ -195,7 +196,7 @@ export const AboutStyled = styled.div`
         bottom: 0;
         right: -5%;
         z-index: -1;
-        overflow: hidden;
+
         width: 80%;
         max-height: 70%;
         

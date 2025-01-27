@@ -20,13 +20,12 @@ export const ServicesSectionStyled = styled.section`
 
 export const AboutSectionStyled = styled.section`
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 `
 
 export const WorksSectionStyled = styled.section`
     width: 100%;
-    /* height: 1000px; */
-    background-color: red;
+    overflow: hidden;
 
 `
 

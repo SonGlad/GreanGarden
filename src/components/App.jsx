@@ -1,11 +1,17 @@
 import { Header } from "./Header/Header";
-import { SectionHero, SectionAbout, SectionContact, SectionWorks, SectionServices } from "./Section/Section";
+import { 
+  SectionHero, 
+  SectionAbout, 
+  // SectionContact, 
+  SectionWorks, 
+  SectionServices 
+} from "./Section/Section";
 import { Container } from "./Container/Container";
 import { HeroSection } from "./HeroSection/Hero";
 import { Services } from "./ServicesSection/Services";
 import { About } from "./AboutSection/About";
 import { Works } from "./WorksSection/Works";
-import { Contact } from "./ContactSection/Contac";
+// import { Contact } from "./ContactSection/Contac";
 import { Footer } from "./Footer/Footer";
 import { useRef } from "react";
 
@@ -59,14 +65,14 @@ export const App = () => {
           <Works/>
         </Container>
       </SectionWorks>
-      <SectionContact
+      {/* <SectionContact
         propsId={'ContactSection'}
         contactSectionRef ={contactSectionRef }
       >
         <Container>
           <Contact/>
         </Container>
-      </SectionContact>
+      </SectionContact> */}
       <Footer/>
     </>
   );
