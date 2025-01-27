@@ -15,10 +15,12 @@ export const HeroSectionStyled = styled.section`
 
 export const ServicesSectionStyled = styled.section`
     width: 100%;
+    overflow: hidden;
 `
 
 export const AboutSectionStyled = styled.section`
     width: 100%;
+    overflow-x: hidden;
 `
 
 export const WorksSectionStyled = styled.section`
