@@ -1,7 +1,7 @@
 import { ContactLinkStyled } from "./ContactLink.styled";
 
 
-export const ContactLink = () => {
+export const ContactLink = ({footer}) => {
 
     const phoneNumber = '+380969692447';
     const message = encodeURIComponent('Здравствуйте! Я хочу заказать ваши услуги.');
@@ -9,7 +9,7 @@ export const ContactLink = () => {
 
 
     return(
-        <ContactLinkStyled>
+        <ContactLinkStyled $footer={footer}>
             <a  className="contact-menu-link" 
                 href={whatsappUrl} 
                 target="_blank" 

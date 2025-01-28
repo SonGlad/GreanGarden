@@ -18,10 +18,10 @@ import { useRef } from "react";
 
 export const App = () => {
   const heroSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null);
   const serviceskSectionRef = useRef(null);
-  const contactSectionRef = useRef(null);
+  const aboutSectionRef = useRef(null);
   const workSectionRef = useRef(null);
+  const footerRef = useRef(null);
 
 
   return (
@@ -30,7 +30,7 @@ export const App = () => {
         heroSectionRef={heroSectionRef}
         aboutSectionRef={aboutSectionRef}
         serviceskSectionRef={serviceskSectionRef}
-        contactSectionRef={contactSectionRef}
+        footerRef={footerRef}
         workSectionRef ={workSectionRef }
       />
       <SectionHero 
@@ -73,7 +73,10 @@ export const App = () => {
           <Contact/>
         </Container>
       </SectionContact> */}
-      <Footer/>
+      <Footer
+        propsId={'Footer'}
+        footerRef={footerRef}
+      />
     </>
   );
 }

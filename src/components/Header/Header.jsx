@@ -14,10 +14,10 @@ import ScrollIntoView from 'react-scroll-into-view';
 
 export const Header = forwardRef(({
     heroSectionRef, 
-    aboutSectionRef, 
     serviceskSectionRef, 
-    contactSectionRef, 
-    workSectionRef
+    aboutSectionRef, 
+    workSectionRef,
+    footerRef 
     }, ref) => {
     const [langMenu, setLangMenu] = useState(false);
     const [langValue, setlangvalue] = useState('EN');
@@ -114,10 +114,10 @@ export const Header = forwardRef(({
                     </ScrollIntoView>
                     <div className="desctop-menu">
                         <NavLinks
-                            aboutSectionRef={aboutSectionRef}
                             serviceskSectionRef={serviceskSectionRef}
-                            contactSectionRef={contactSectionRef}
+                            aboutSectionRef={aboutSectionRef}
                             workSectionRef={workSectionRef}
+                            footerRef={footerRef}
                         />
                     </div>
                     <div className="lang-cont" ref={langCont}>
@@ -160,10 +160,10 @@ export const Header = forwardRef(({
                             </button>
                             <NavLinks
                                 setMobileMenuActive={setMobileMenuActive}
-                                aboutSectionRef={aboutSectionRef}
                                 serviceskSectionRef={serviceskSectionRef}
-                                contactSectionRef={contactSectionRef}
+                                aboutSectionRef={aboutSectionRef}
                                 workSectionRef={workSectionRef}
+                                footerRef={footerRef}
                             />
                             <p className="menu-description">We take care of your home while you are away</p>
                             <ContactLink/>

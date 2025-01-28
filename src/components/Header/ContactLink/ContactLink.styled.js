@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const ContactLinkStyled = styled.div`
-    width: 90%;
+    width: ${props => props.$footer ? "100%" : "90%"};
     margin-left: auto;
     margin-right: auto;
 
@@ -13,12 +13,12 @@ export const ContactLinkStyled = styled.div`
     .contact-menu-link{
         width: 100%;
         display: block;
-        padding: 15px;
+        font-weight: ${p => p.$footer ? '400': "500"};
+        padding: ${props => props.$footer ? "10px 30px" : "15px"};
         border-radius: 10px;
         border: 1px solid ${(p) => p.theme.color.logo_green_color};
         color: ${(p) => p.theme.color.text_color2};
         background-color: ${(p) => p.theme.color.body_bg_color};
-        font-weight: 500;
         font-size: 14px;
         line-height: 14px;
         transition: color ${p => p.theme.transition.main_transition},
@@ -26,16 +26,18 @@ export const ContactLinkStyled = styled.div`
                     outline ${p => p.theme.transition.main_transition};
 
         @media screen and (min-width: 768px){
+            padding: ${props => props.$footer ? "10px 30px" : "5px 10px"};
+            font-size: ${p => p.$footer ? "20px" : "14px"};
+            border-radius: ${p => p.$footer ? "30px" : "10px"};
             text-align: center;
             text-decoration: none;
-            padding: 5px 10px;
             width: 168px;
         }
 
         @media screen and (min-width: 1280px){
+            padding: ${props => props.$footer ? "10px 40px" : "10px 15px"};
             line-height: 22px;
             font-size: 20px;
-            padding: 10px 15px;
             border-radius: 30px;
             width: fit-content;
         }  

@@ -33,7 +33,7 @@ export const NavLinks = forwardRef(({
                     </ScrollIntoView>
                 </li>
                 <li className="navigation-item">
-                    <ScrollIntoView selector='#ContactSection' className="nav-link" onClick={setMobileMenuActive}>
+                    <ScrollIntoView selector='#Footer' className="nav-link" onClick={setMobileMenuActive}>
                         <span>Contacts</span>
                     </ScrollIntoView>
                 </li>
