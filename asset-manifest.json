@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/GreanGarden/static/css/main.db317afe.css",
-    "main.js": "/GreanGarden/static/js/main.22ab0070.js",
+    "main.js": "/GreanGarden/static/js/main.e2ceb341.js",
+    "static/js/38.a52544a2.chunk.js": "/GreanGarden/static/js/38.a52544a2.chunk.js",
     "static/media/fog.png": "/GreanGarden/static/media/fog.d4430bf9c58356ebba20.png",
     "static/media/Subtract.png": "/GreanGarden/static/media/Subtract.b806eb2db01001f24beb.png",
     "static/media/picture2.jpg": "/GreanGarden/static/media/picture2.8aec0bb8a16c069af45c.jpg",
@@ -29,10 +30,11 @@
     "static/media/close.svg": "/GreanGarden/static/media/close.9cb1a87627ef012af4a24f1b68fb9e45.svg",
     "static/media/burger.svg": "/GreanGarden/static/media/burger.fcd5f642cf7711d65bdfd48c01690f8b.svg",
     "main.db317afe.css.map": "/GreanGarden/static/css/main.db317afe.css.map",
-    "main.22ab0070.js.map": "/GreanGarden/static/js/main.22ab0070.js.map"
+    "main.e2ceb341.js.map": "/GreanGarden/static/js/main.e2ceb341.js.map",
+    "38.a52544a2.chunk.js.map": "/GreanGarden/static/js/38.a52544a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db317afe.css",
-    "static/js/main.22ab0070.js"
+    "static/js/main.e2ceb341.js"
   ]
 }
