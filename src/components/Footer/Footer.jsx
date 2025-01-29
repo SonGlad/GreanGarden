@@ -19,8 +19,7 @@ export const Footer = forwardRef(({propsId, footerRef}, reff) => {
         setDate(year);
         setFooter(true);
     },[])
-    console.log(footer);
-    
+  
 
 
     return(

@@ -1,10 +1,14 @@
 import { ContactLinkStyled } from "./ContactLink.styled";
+import { useTranslation } from 'react-i18next';
+
 
 
 export const ContactLink = ({footer}) => {
+    const { t } = useTranslation();
 
-    const phoneNumber = '+380969692447';
-    const message = encodeURIComponent('Здравствуйте! Я хочу заказать ваши услуги.');
+
+    const phoneNumber = `${t('header.contactUsNumber')}`;
+    const message = encodeURIComponent(t('header.contactUsTextMessage'));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
 
@@ -15,7 +19,7 @@ export const ContactLink = ({footer}) => {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                <span>Contact us</span>  
+                <span>{t('header.contactUsText')}</span>  
             </a>
         </ContactLinkStyled>
     );

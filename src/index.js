@@ -5,6 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './globalStyles/globaleStyles.styled.js'
 import { theme } from './globalStyles/theme.js';
 import { BrowserRouter } from 'react-router-dom';
+import { I18nextProvider } from "react-i18next";
+import { Suspense } from 'react';
+import i18n from './i18n';
+import './i18n.js';
 
 
 
@@ -13,12 +17,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-      <BrowserRouter basename='/'>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle/>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
+    <BrowserRouter basename='/'>
+      <I18nextProvider i18n={i18n}>
+        <Suspense fallback="...loading">
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <App />
+          </ThemeProvider>
+        </Suspense>
+      </I18nextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -9,6 +9,7 @@ import { useState, useRef, useCallback, useEffect, forwardRef } from "react";
 import { NavLinks } from "./NavLinks/NavLink";
 import { ContactLink } from "./ContactLink/ContactLink";
 import ScrollIntoView from 'react-scroll-into-view';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -17,30 +18,24 @@ export const Header = forwardRef(({
     serviceskSectionRef, 
     aboutSectionRef, 
     workSectionRef,
-    footerRef 
+    footerRef,
+    langArray,
+    langToShow,
+    langMenu,
+    setLangMenu,
+    choseLang,
     }, ref) => {
-    const [langMenu, setLangMenu] = useState(false);
-    const [langValue, setlangvalue] = useState('EN');
     const [isMobMenuActive, setMobMenuActive] = useState(false);
     const langCont = useRef(null);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { t } = useTranslation();
+      
+
     
-
-    const langArray = [
-        {'lang': 'EN'},
-        {'lang': 'RU'},
-        {'lang': 'PL'},
-    ];
-
-
     const toggleLangMenuOpen = () => {
         setLangMenu(prevState => !prevState);
     };
 
-    const choseLang = (lang) => {
-        setLangMenu(false);
-        setlangvalue(lang);
-    };
 
     const setMobileMenuActive = (event) => {
         setMobMenuActive(prevState => !prevState);
@@ -72,7 +67,7 @@ export const Header = forwardRef(({
                 setLangMenu(false);
             }
         }
-    },[langMenu]);
+    },[langMenu, setLangMenu]);
 
 
     const onBackdropClick = useCallback(event => {
@@ -126,11 +121,11 @@ export const Header = forwardRef(({
                             aria-label="Language Button" 
                             onClick={toggleLangMenuOpen}
                         >
-                            <p className="lang-text">{langValue}</p>
+                            <p className="lang-text">{langToShow}</p>
                             <ArrowDown className="arrow-svg" width={16} height={16}/>
                         </button>
                         <ul className={`lang-drop-list ${toggleLangMenu()}`}>
-                            {langArray.filter(({ lang }) => lang !== langValue).map(({lang}, index) => (
+                            {langArray.filter(({ lang }) => lang !== langToShow).map(({lang}, index) => (
                                 <li key={index} className="lang-drop-item" onClick={() => choseLang(lang)}>
                                     <p>{lang}</p>
                                 </li>
@@ -165,7 +160,7 @@ export const Header = forwardRef(({
                                 workSectionRef={workSectionRef}
                                 footerRef={footerRef}
                             />
-                            <p className="menu-description">We take care of your home while you are away</p>
+                            <p className="menu-description">{t('header.description')}</p>
                             <ContactLink/>
                         </div>
                     </div>

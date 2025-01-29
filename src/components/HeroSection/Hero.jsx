@@ -1,12 +1,14 @@
 import { HeroStyled } from "./Hero.styled";
+import { useTranslation } from 'react-i18next';
 
 
 
 export const HeroSection = () => {
+    const { t } = useTranslation();
 
 
-    const phoneNumber = '+380969692447';
-    const message = encodeURIComponent('Здравствуйте! Я хочу заказать ваши услуги.');
+    const phoneNumber = `${t('header.contactUsNumber')}`;
+    const message = encodeURIComponent(t('header.contactUsTextMessage'));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
 
@@ -14,8 +16,8 @@ export const HeroSection = () => {
         <HeroStyled>
             <div className="fog-div"></div>
             <div className="content-cont">
-                <h1 className="title">View of the Gardens</h1>
-                <h2 className="sub-title">Professional care for every garden</h2>
+                <h1 className="title">{t('hero.name')}</h1>
+                <h2 className="sub-title">{t('hero.slogan')}</h2>
             </div>
             <div className="contact-link-cont">
                 <a  className="hero-contact-link" 
@@ -23,7 +25,7 @@ export const HeroSection = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                 >
-                    <span>Contact us</span>  
+                    <span>{t('header.contactUsText')}</span>  
                 </a>
             </div>
         </HeroStyled>
