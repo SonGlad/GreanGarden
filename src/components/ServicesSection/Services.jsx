@@ -13,18 +13,20 @@ import {ReactComponent as PictureThreeSVG} from "../../images/svg/picture3_svg.s
 import {ReactComponent as PictureFourSVG} from "../../images/svg/picture4_svg.svg";
 import {ReactComponent as PictureFiveSVG} from "../../images/svg/picture5_svg.svg";
 import {ReactComponent as PictureSixSVG} from "../../images/svg/picture6_svg.svg";
+import { useTranslation } from 'react-i18next';
 
 
 
+export const Services = ({hebrew}) => {
+    const { t } = useTranslation();
 
-export const Services = () => {
 
 
     return(
-        <ServicesStyled>
+        <ServicesStyled $hebrew={hebrew}>
             <div className="services-title-cont">
                 <span className='span-before'></span>
-                <h2 className="service-section-title">Services</h2>
+                <h2 className="service-section-title">{t('services.title')}</h2>
                 <span className="span-after"></span>
             </div>
             <div className="services-svg-background">
@@ -43,7 +45,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Landscape design, design and creation of gardens</p>
+                            <p className="descr-text">{t('services.descriptionOne')}</p>
                         </div>
                     </li>
                     <li className="services-items">
@@ -54,7 +56,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Regular maintenance (pruning, planting, cleaning, restoration).</p>
+                            <p className="descr-text">{t('services.descriptionTwo')}</p>
                         </div>
                     </li>
                     <li className="services-items">
@@ -65,7 +67,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Renewal of existing green areas</p>
+                            <p className="descr-text">{t('services.descriptionThree')}</p>
                         </div>
                     </li>
                     <li className="services-items">
@@ -76,7 +78,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Installation of irrigation systems and fertilizer systems</p>
+                            <p className="descr-text">{t('services.descriptionFour')}</p>
                         </div>
                     </li>
                     <li className="services-items">
@@ -87,7 +89,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Vertical gardens</p>
+                            <p className="descr-text">{t('services.descriptionFive')}</p>
                         </div>
                     </li>
                     <li className="services-items">
@@ -98,7 +100,7 @@ export const Services = () => {
                             </span>
                         </div>
                         <div className="service-description-cont">
-                            <p className="descr-text">Consultation on landscaping find or make icons for these items for a block on the service website</p>
+                            <p className="descr-text">{t('services.descriptionSix')}</p>
                         </div>
                     </li>
                 </ul>

@@ -24,6 +24,7 @@ export const Header = forwardRef(({
     langMenu,
     setLangMenu,
     choseLang,
+    hebrew
     }, ref) => {
     const [isMobMenuActive, setMobMenuActive] = useState(false);
     const langCont = useRef(null);
@@ -101,7 +102,7 @@ export const Header = forwardRef(({
 
 
     return (
-        <HeaderStyled $isScrolled={isScrolled}>
+        <HeaderStyled $isScrolled={isScrolled} $hebrew={hebrew}>
             <Container>
                 <div className="header-container">
                     <ScrollIntoView selector="#HeroSection">
@@ -113,6 +114,7 @@ export const Header = forwardRef(({
                             aboutSectionRef={aboutSectionRef}
                             workSectionRef={workSectionRef}
                             footerRef={footerRef}
+                            hebrew={hebrew}
                         />
                     </div>
                     <div className="lang-cont" ref={langCont}>
@@ -159,9 +161,12 @@ export const Header = forwardRef(({
                                 aboutSectionRef={aboutSectionRef}
                                 workSectionRef={workSectionRef}
                                 footerRef={footerRef}
+                                hebrew={hebrew}
                             />
                             <p className="menu-description">{t('header.description')}</p>
-                            <ContactLink/>
+                            <ContactLink
+                                hebrew={hebrew}
+                            />
                         </div>
                     </div>
                 </div>

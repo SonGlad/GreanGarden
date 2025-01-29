@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 
 
-export const ContactLink = ({footer}) => {
+export const ContactLink = ({footer, hebrew}) => {
     const { t } = useTranslation();
 
 
@@ -13,7 +13,7 @@ export const ContactLink = ({footer}) => {
 
 
     return(
-        <ContactLinkStyled $footer={footer}>
+        <ContactLinkStyled $footer={footer} $hebrew={hebrew}>
             <a  className="contact-menu-link" 
                 href={whatsappUrl} 
                 target="_blank" 

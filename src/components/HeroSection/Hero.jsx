@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 
 
-export const HeroSection = () => {
+export const HeroSection = ({hebrew}) => {
     const { t } = useTranslation();
 
 
@@ -13,7 +13,7 @@ export const HeroSection = () => {
 
 
     return(
-        <HeroStyled>
+        <HeroStyled $hebrew={hebrew}>
             <div className="fog-div"></div>
             <div className="content-cont">
                 <h1 className="title">{t('hero.name')}</h1>

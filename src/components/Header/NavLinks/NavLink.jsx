@@ -11,13 +11,14 @@ export const NavLinks = forwardRef(({
     aboutSectionRef, 
     serviceskSectionRef, 
     contactSectionRef, 
-    workSectionRef
+    workSectionRef,
+    hebrew
     }, ref) => {
     const { t } = useTranslation();
 
 
     return (
-        <NavLinksStyled>
+        <NavLinksStyled $hebrew={hebrew}>
             <ul className="navigation-list">
                 <li className="navigation-item">
                     <ScrollIntoView selector='#ServiceSection' className="nav-link" onClick={setMobileMenuActive}>

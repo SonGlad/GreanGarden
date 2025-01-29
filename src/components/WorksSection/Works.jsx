@@ -1,53 +1,56 @@
 import { WorksStyled } from "./Works.styled";
 import SVGBackgroundImage4 from '../../images/images/svg-back4.png';
+import { useTranslation } from 'react-i18next';
 
 
 
-export const Works = () => {
+export const Works = ({hebrew}) => {
+    const { t } = useTranslation();
+
 
 
     return(
-        <WorksStyled>
+        <WorksStyled $hebrew={hebrew}>
             <div className="work-title-cont">
                 <span className='span-before'></span>
-                <h2 className="work-section-title">How it work</h2>
+                <h2 className="work-section-title">{t('work.title')}</h2>
                 <span className="span-after"></span>
             </div>
             <ul className="work-list">
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">01</span>
-                        <h3 className="item-title">Consultation and analysis</h3>
+                        <h3 className="item-title">{t('work.subTitleOne')}</h3>
                     </div>
-                    <p className="work-item-text">We discuss your wishes, inspect the site and analyze its features (soil, lighting, climate).</p>
+                    <p className="work-item-text">{t('work.textOne')}</p>
                 </li>
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">02</span>
-                        <h3 className="item-title">Project development</h3>
+                        <h3 className="item-title">{t('work.subTitleTwo')}</h3>
                     </div>
-                    <p className="work-item-text">Our designers create a unique plan for your garden or green area, taking into account every detail.</p>
+                    <p className="work-item-text">{t('work.textTwo')}</p>
                 </li>
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">03</span>
-                        <h3 className="item-title">Preparing the area</h3>
+                        <h3 className="item-title">{t('work.subTitleThree')}</h3>
                     </div>
-                    <p className="work-item-text">We prepare the site for landscaping: we clean, fertilize the soil and install the necessary systems (watering, drainage).</p>
+                    <p className="work-item-text">{t('work.textThree')}</p>
                 </li>
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">04</span>
-                        <h3 className="item-title">Planting</h3>
+                        <h3 className="item-title">{t('work.subTitleFour')}</h3>
                     </div>
-                    <p className="work-item-text">We plant selected plants, trees, flowers and create landscape elements in accordance with the approved project.</p>
+                    <p className="work-item-text">{t('work.textFour')}</p>
                 </li>
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">05</span>
-                        <h3 className="item-title">Service</h3>
+                        <h3 className="item-title">{t('work.subTitleFive')}</h3>
                     </div>
-                    <p className="work-item-text">Our experts provide regular maintenance for your garden, including pruning, watering and pest control.</p>
+                    <p className="work-item-text">{t('work.textFive')}</p>
                 </li>
             </ul>
             <div className="work-back-cont">

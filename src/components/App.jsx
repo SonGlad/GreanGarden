@@ -31,8 +31,9 @@ export const App = () => {
   const initialLang = savedLang || i18n.language.split('-')[0].toUpperCase();
   const [langValue, setLangValue] = useState(initialLang);
   const [langToShow, setLangToShow] = useState(initialLang);
-
-
+  const [hebrew, setHebrew] = useState(false);
+  console.log(hebrew);
+  
   const langArray = [
     {'lang': 'EN'},
     {'lang': 'RU'},
@@ -48,8 +49,13 @@ export const App = () => {
   useEffect(() => {
     const languageCode = langValue.split('-')[0];
     setLangToShow(languageCode);
+    if (languageCode === 'HE') {
+      setHebrew(true);
+    } else {
+      setHebrew(false);
+    }
   },[langValue]);
-  
+
 
   const choseLang = (lang) => {
     i18n.changeLanguage(lang.toLowerCase());
@@ -72,13 +78,16 @@ export const App = () => {
         langToShow={langToShow}
         setLangMenu={setLangMenu}
         choseLang={choseLang}
+        hebrew={hebrew}
       />
       <SectionHero 
         propsId={'HeroSection'}
         heroSectionRef={heroSectionRef}
       >
         <Container>
-          <HeroSection/>
+          <HeroSection
+            hebrew={hebrew}
+          />
         </Container>
       </SectionHero>
       <SectionServices
@@ -86,7 +95,9 @@ export const App = () => {
         serviceskSectionRef={serviceskSectionRef}
       >
         <Container>
-          <Services/>
+          <Services
+            hebrew={hebrew}
+          />
         </Container>
       </SectionServices>
       <SectionAbout
@@ -94,7 +105,9 @@ export const App = () => {
         aboutSectionRef={aboutSectionRef}
       >
         <Container>
-          <About/>
+          <About
+            hebrew={hebrew}
+          />
         </Container>
       </SectionAbout>
       <SectionWorks
@@ -102,7 +115,9 @@ export const App = () => {
         workSectionRef={workSectionRef}
       >
         <Container>
-          <Works/>
+          <Works
+            hebrew={hebrew}
+          />
         </Container>
       </SectionWorks>
       {/* <SectionContact
@@ -116,6 +131,7 @@ export const App = () => {
       <Footer
         propsId={'Footer'}
         footerRef={footerRef}
+        hebrew={hebrew}
       />
     </>
 
