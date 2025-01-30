@@ -134,7 +134,6 @@ export const App = () => {
         hebrew={hebrew}
       />
     </>
-
   );
 }
 

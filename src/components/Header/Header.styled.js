@@ -20,7 +20,7 @@ export const HeaderStyled = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        flex-direction: ${p =>p.$hebrew ? "row-reverse" : "row"};
     }
 
     .header-logo{
@@ -36,26 +36,23 @@ export const HeaderStyled = styled.header`
         @media screen and (max-width: 767px){
             display: none;
         }
-        margin-left: auto;
+        ${p => (p.$hebrew ? "margin-right: auto;" : "margin-left: auto;")};
 
         @media screen and (min-width: 1280px){
-            margin-right: 32px;
+            ${p => (p.$hebrew ? "margin-left: 32px;" : "margin-right: 32px;")};
             width: 100%;
         }
     }
 
 
     .lang-cont{
-        margin-left: auto;
-        margin-right: 2.5rem;
+        margin-left: ${p => p.$hebrew ? "2.5rem" : "auto"};
+        margin-right: ${p => p.$hebrew ? "auto" : "2.5rem"};
         position: relative;
 
         @media screen and (min-width: 768px){
-            margin-right: 0;
-        }
-
-        @media screen and (min-width: 1280px){
-            margin-left: 0;
+            margin-right: ${p => p.$hebrew ? "auto" : "0"};
+            margin-left: ${p => p.$hebrew ? "0" : "auto"};
         }
 
         & .lang-text{
@@ -79,11 +76,13 @@ export const HeaderStyled = styled.header`
             color: ${(p) => p.theme.color.text_color1};
             transition: background-color ${(p) => p.theme.transition.main_transition},
                         border ${(p) => p.theme.transition.main_transition};
+            flex-direction: ${p =>p.$hebrew ? "row-reverse" : "row"};
 
             &:hover{
                 color: ${(props) => props.theme.color.hover_color};
                 border: 1px solid ${(p) => p.theme.color.hover_color};
             }
+
 
             & .arrow-svg{
                 fill: ${(p) => p.theme.color.text_color1};
@@ -118,12 +117,13 @@ export const HeaderStyled = styled.header`
 
             
             & .lang-drop-item{
-                padding: 5px;
+                padding: 6.5px 5px;
                 width: 100%;
                 background-color: ${(props) => props.theme.color.header_bg_color};
                 color: ${(p) => p.theme.color.text_color1};
                 transition: background-color ${(p) => p.theme.transition.main_transition};
                 cursor: pointer;
+                text-align: ${p => p.$hebrew ? "right" : "left"};
                 
                 &:hover{
                     color: ${(props) => props.theme.color.hover_color};
@@ -202,7 +202,7 @@ export const HeaderStyled = styled.header`
         & .close-btn{
             position: absolute;
             top: 20px;
-            right: 20px;
+            ${p => (p.$hebrew ? "left: 20px; right: auto;" : "right: 20px; left: auto;")};
             display: flex;
             align-items: center;
             justify-content: center;
@@ -225,6 +225,13 @@ export const HeaderStyled = styled.header`
         width: 100%;
         padding-bottom: 20px;
         border-bottom: 1px solid ${(p) => p.theme.color.text_color1};
+        
+        & .mobile-header-logo{
+            width: 80px;
+            height: auto;
+            margin-left: ${p => p.$hebrew ? "auto" : "0"};
+            margin-right: ${p => p.$hebrew ? "0" : "auto"};
+        }
     }
 
     .menu-description{
@@ -236,6 +243,8 @@ export const HeaderStyled = styled.header`
         max-width: 210px;
         line-height: 24px;
         color: ${(p) => p.theme.color.text_color1};
+        direction: ${p => (p.$hebrew ? "rtl" : "ltr")};
+        unicode-bidi: ${p => (p.$hebrew ? "bidi-override" : "normal")};
     }
 
 `

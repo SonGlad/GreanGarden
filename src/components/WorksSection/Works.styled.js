@@ -4,17 +4,6 @@ import styled from "styled-components";
 export const WorksStyled = styled.div`
     position: relative;
     padding-bottom: 120px;
-    /* padding-bottom: calc(460px - (100vw - 460px)); */
-
-
-    /* @media screen and (min-width: 768px){
-        padding-bottom: calc(380px - ((100vw - 768px) * 0.3));
-    } */
-
-    
-    /* @media screen and (min-width: 1280px){
-        padding-bottom: calc(335px - ((100vw - 1280px) * 0.1));
-    } */
 
 
     .work-title-cont{

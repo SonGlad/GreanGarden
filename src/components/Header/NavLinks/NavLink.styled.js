@@ -18,10 +18,11 @@ export const NavLinksStyled = styled.nav`
         justify-content: space-between;
         flex-direction: column;
         gap: 10px;
+        min-width: 400px;
     }
 
     @media screen and (min-width: 1280px){
-        flex-direction: row;
+        flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
         gap: 48px;
     }
 
@@ -34,15 +35,16 @@ export const NavLinksStyled = styled.nav`
             align-items: center;
             justify-content: center;
             gap: 40px;
+            flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
         }
 
         @media screen and (min-width: 1280px){
             gap: 24px;
             width: fit-content;
-            justify-content: flex-end;
+            justify-content: ${p => p.$hebrew ? "flex-start" : "flex-end"};
             font-weight: 400;
             font-size: 24px;
-            margin-left: auto;
+            ${p => (p.$hebrew ? "margin-right: auto;" : "margin-left: auto;")};
         }
 
         & .navigation-item{
@@ -70,14 +72,14 @@ export const NavLinksStyled = styled.nav`
                 height: 2px;
                 bottom: -2px;
                 background-color: ${p => p.theme.color.hover_color};
-                transform-origin: right;
+                transform-origin: ${p => p.$hebrew ? "left" : "right"};
                 transform: scaleX(0);
                 transition: transform ${p => p.theme.transition.main_transition}; 
             }
 
             &:focus::after,
             &:hover::after {
-                transform-origin: left;
+                transform-origin: ${p => p.$hebrew ? "right" : "left"};
                 transform: scaleX(1);
             }
 
@@ -102,6 +104,7 @@ export const NavLinksStyled = styled.nav`
             display: flex;
             align-items: center;
             justify-content: space-around;
+            flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
 
             
             @media screen and (min-width: 1280px){
@@ -134,6 +137,7 @@ export const NavLinksStyled = styled.nav`
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: ${p => p.$hebrew ? 'row-reverse' : 'row'};
             gap: 8px;
             transition: color ${p => p.theme.transition.main_transition},
                     outline ${p => p.theme.transition.main_transition};
@@ -168,10 +172,7 @@ export const NavLinksStyled = styled.nav`
                     fill: ${(p) => p.theme.color.hover_color};
                 }
             }
-            
-
         }
-
     }
 
 `

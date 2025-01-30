@@ -7,7 +7,8 @@ export const ServicesStyled = styled.div`
     padding-bottom: 154px;
 
     @media screen and (min-width: 768px){
-        padding-top: 90px; 
+        padding-top: 90px;
+        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
     }
 
     @media screen and (min-width: 1280px){
@@ -25,6 +26,7 @@ export const ServicesStyled = styled.div`
             color: ${p => p.theme.color.text_color2};
             font-weight: 500;
             font-size: 48px;
+            transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
         }
 
         & .span-before{
@@ -160,6 +162,10 @@ export const ServicesStyled = styled.div`
         & .services-items{
             position: relative;
 
+            @media screen and (min-width: 768px){
+                transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+            }
+
             & .service-main-cont{
                 position: relative;
                 border-radius: 25px;
@@ -190,7 +196,7 @@ export const ServicesStyled = styled.div`
                 & .svg-image{
                     position: absolute;
                     top: 12px;
-                    right: 12px;
+                    ${p => (p.$hebrew ? "left: 12px;" : "right: 12px;")};
                     padding: 10px;
                     border-radius: 50%;
                     background-color: ${p => p.theme.color.text_color2};
@@ -230,7 +236,6 @@ export const ServicesStyled = styled.div`
                 backdrop-filter: blur(4px);
                 border-radius: 15px;
                 transform: translate(-50%, -70%);
-
                 
                 
                 @media screen and (min-width: 768px){
@@ -238,12 +243,14 @@ export const ServicesStyled = styled.div`
                 }
                 
                 @media screen and (min-width: 1280px){
-                    left: auto;
+                    ${p => (p.$hebrew ? "right: auto;" : "left: auto;")};
                     width: 74.25%;
-                    transform: translate(-35%, -70%);
+                    transform: translate(${p => (p.$hebrew ? "0%, -70%" : "-35%, -70%")});
                 }
-
+                
                 & .descr-text{
+                    direction: ${p => (p.$hebrew ? "rtl" : "ltr")};
+                    unicode-bidi: ${p => (p.$hebrew ? "bidi-override" : "normal")};
                     text-align: center;
                     color: ${p => p.theme.color.text_color1};
                     font-weight: 400;

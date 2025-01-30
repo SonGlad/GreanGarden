@@ -12,6 +12,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.0",
+    "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-scroll-into-view": "^2.1.3",

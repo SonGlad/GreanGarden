@@ -31,13 +31,9 @@ export const WorksSectionStyled = styled.section`
 
 export const ContactSectionStyled = styled.section`
     width: 100%;
-    /* height: 1000px; */
-    background-color: orange;
-
 `
 
 export const SectionStyled = styled.section`
     width: 100%;
-    /* height: 1000px; */
 `
 

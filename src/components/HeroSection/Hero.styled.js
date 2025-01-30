@@ -22,6 +22,8 @@ export const HeroStyled = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column; 
+    inset: 0;
+    transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
     
     
     @media screen and (min-width: 1280px){
@@ -82,8 +84,8 @@ export const HeroStyled = styled.div`
         background-color: #e7ffcb3b;
         border-radius: 30px;
         padding: 43px 24px;
-        margin-left: 10px;
-        margin-right: 10px;
+        width: 95%;
+        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
         @media screen and (min-width: 780px){
             margin-left: auto;
@@ -92,9 +94,12 @@ export const HeroStyled = styled.div`
         }
         
         @media screen and (min-width: 1280px){
+            width: auto;
             max-width: none;
+            min-width: 670px;
             margin-left: 140px;
             margin-right: 0;
+            inset: 0;
         }
     }
 
@@ -109,6 +114,7 @@ export const HeroStyled = styled.div`
         }
 
         @media screen and (min-width: 1280px){
+            text-align: ${p => p.$hebrew ? "right" : "left"};
             font-size: 64px;
         }
     }
@@ -124,7 +130,7 @@ export const HeroStyled = styled.div`
 
         @media screen and (min-width: 1280px){
             font-size: 32px;
-            text-align: left;
+            text-align: ${p => p.$hebrew ? "right" : "left"};
         }
     }
 
@@ -132,6 +138,7 @@ export const HeroStyled = styled.div`
         margin-top: 40px;
         text-align: center;
         width: 50%;
+        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
         @media screen and (min-width: 768px){
             max-width: 50%;

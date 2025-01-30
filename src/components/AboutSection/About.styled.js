@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const AboutStyled = styled.div`
     position: relative;
     padding-bottom: calc(460px - (100vw - 460px));
-
+    transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
 
     @media screen and (min-width: 768px){
@@ -22,6 +22,8 @@ export const AboutStyled = styled.div`
        align-items: center;
        justify-content: center;
        gap: 15px;
+       transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+       
        
        & .about-section-title{
            color: ${p => p.theme.color.text_color2};
@@ -153,6 +155,10 @@ export const AboutStyled = styled.div`
 
             & li{
                 margin-bottom: 15px;
+                transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+                text-align: ${p => p.$hebrew ? "right" : "left"};
+                direction: ${p => (p.$hebrew ? "rtl" : "ltr")};
+                unicode-bidi: ${p => (p.$hebrew ? "bidi-override" : "normal")};
             }
 
             & li:first-child{
@@ -160,19 +166,20 @@ export const AboutStyled = styled.div`
 
                 & .about-descr-svg{
                     position: absolute;
-                    top: 0;
-                    right: 0;
                     width: 80px;
-                    transform: translate(25%, -67%);
+                    top: 0;
+                    ${p => (p.$hebrew ? "left: 0;" : "right: 0;")};
+                    transform: translate(${p => (p.$hebrew ? "-25%, -67%" : "25%, -67%")}) scaleX(${p => (p.$hebrew ? "-1" : "1")});
+
 
                     @media screen and (min-width: 768px){
-                        transform: translate(41%, -67%);
+                        transform: translate(${p => (p.$hebrew ? "-41%, -67%" : "41%, -67%")}) scaleX(${p => (p.$hebrew ? "-1" : "1")});
                         width: 105px;
                     }
 
                     @media screen and (min-width: 1280px){
                         width: 185px;
-                        transform: translate(52%, -78%);
+                        transform: translate(${p => (p.$hebrew ? "-52%, -78%" : "52%, -78%")}) scaleX(${p => (p.$hebrew ? "-1" : "1")});
                     }
                 }
             }
