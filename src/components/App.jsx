@@ -6,6 +6,7 @@ import {
   SectionWorks, 
   SectionServices 
 } from "./Section/Section";
+import { StyledApp } from "./App.styled";
 import { Container } from "./Container/Container";
 import { HeroSection } from "./HeroSection/Hero";
 import { Services } from "./ServicesSection/Services";
@@ -49,11 +50,7 @@ export const App = () => {
   useEffect(() => {
     const languageCode = langValue.split('-')[0];
     setLangToShow(languageCode);
-    if (languageCode === 'HE') {
-      setHebrew(true);
-    } else {
-      setHebrew(false);
-    }
+    setHebrew(languageCode === 'HE');
   },[langValue]);
 
 
@@ -90,49 +87,54 @@ export const App = () => {
           />
         </Container>
       </SectionHero>
-      <SectionServices
-        propsId={'ServiceSection'}
-        serviceskSectionRef={serviceskSectionRef}
-      >
-        <Container>
-          <Services
-            hebrew={hebrew}
-          />
-        </Container>
-      </SectionServices>
-      <SectionAbout
-        propsId={'AboutSection'}
-        aboutSectionRef={aboutSectionRef}
-      >
-        <Container>
-          <About
-            hebrew={hebrew}
-          />
-        </Container>
-      </SectionAbout>
-      <SectionWorks
-        propsId={'WorksSection'}
-        workSectionRef={workSectionRef}
-      >
-        <Container>
-          <Works
-            hebrew={hebrew}
-          />
-        </Container>
-      </SectionWorks>
-      {/* <SectionContact
-        propsId={'ContactSection'}
-        contactSectionRef ={contactSectionRef }
-      >
-        <Container>
-          <Contact/>
-        </Container>
-      </SectionContact> */}
-      <Footer
-        propsId={'Footer'}
-        footerRef={footerRef}
-        hebrew={hebrew}
-      />
+      <StyledApp>
+        <span className="left-skew"></span>
+        <span className="right-skew"></span>
+        <span className="service-logo"></span>
+        <SectionServices
+          propsId={'ServiceSection'}
+          serviceskSectionRef={serviceskSectionRef}
+        >
+          <Container>
+            <Services
+              hebrew={hebrew}
+            />
+          </Container>
+        </SectionServices>
+        <SectionAbout
+          propsId={'AboutSection'}
+          aboutSectionRef={aboutSectionRef}
+        >
+          <Container>
+            <About
+              hebrew={hebrew}
+            />
+          </Container>
+        </SectionAbout>
+        <SectionWorks
+          propsId={'WorksSection'}
+          workSectionRef={workSectionRef}
+        >
+          <Container>
+            <Works
+              hebrew={hebrew}
+            />
+          </Container>
+        </SectionWorks>
+        {/* <SectionContact
+          propsId={'ContactSection'}
+          contactSectionRef ={contactSectionRef }
+        >
+          <Container>
+            <Contact/>
+          </Container>
+        </SectionContact> */}
+        <Footer
+          propsId={'Footer'}
+          footerRef={footerRef}
+          hebrew={hebrew}
+        />
+      </StyledApp>
     </>
   );
 }

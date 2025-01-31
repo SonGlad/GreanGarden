@@ -6,6 +6,7 @@ export const ServicesStyled = styled.div`
     padding-top: 60px; 
     padding-bottom: 154px;
 
+
     @media screen and (min-width: 768px){
         padding-top: 90px;
         transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
@@ -48,7 +49,7 @@ export const ServicesStyled = styled.div`
             }
         }
 
-        .span-after{
+        & .span-after{
             position: relative;
             width: 100%;
 

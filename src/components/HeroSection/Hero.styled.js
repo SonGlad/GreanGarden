@@ -24,6 +24,8 @@ export const HeroStyled = styled.div`
     flex-direction: column; 
     inset: 0;
     transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+    position: fixed;
+    z-index: 10;
     
     
     @media screen and (min-width: 1280px){
