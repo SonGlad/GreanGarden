@@ -45,6 +45,13 @@ export const Works = ({hebrew}) => {
                     </div>
                     <p className="work-item-text">{t('work.textFour')}</p>
                 </li>
+                <li className="work-item hidden">
+                    <div className="item-title-cont">
+                        <span className="item-num">05</span>
+                        <h3 className="item-title">{t('work.subTitleFive')}</h3>
+                    </div>
+                    <p className="work-item-text">{t('work.textFive')}</p>
+                </li>
                 <li className="work-item">
                     <div className="item-title-cont">
                         <span className="item-num">05</span>

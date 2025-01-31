@@ -5,6 +5,7 @@ export const FooterStyled = styled.footer`
     background-color: ${(props) => props.theme.color.header_bg_color};
     padding: 64px 20px 24px 20px;
     position: relative;
+    transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
     @media screen and (min-width: 768px){
         padding: 64px 64px 24px 64px;
@@ -49,6 +50,10 @@ export const FooterStyled = styled.footer`
                 color: ${p => p.theme.color.text_color1};
                 margin-bottom: 50px;
                 line-height: 28px;
+                transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+                text-align: ${p => p.$hebrew ? "right" : "left"};
+                direction: ${p => (p.$hebrew ? "rtl" : "ltr")};
+                unicode-bidi: ${p => (p.$hebrew ? "bidi-override" : "normal")};
 
                 @media screen and (min-width: 768px){
                     font-size: 24px; 
@@ -63,8 +68,13 @@ export const FooterStyled = styled.footer`
 
                 & .footer-adress-list{
 
+                    & li:first-child{
+                        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+                    }
+
                     & li:last-child{
                         margin-top: 18px;
+                        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
                         @media screen and (min-width: 768px){
                             margin-top: 14px;
@@ -83,6 +93,7 @@ export const FooterStyled = styled.footer`
                             gap: 8px;
                             font-weight: 500;
                             font-size: 20px;
+                            flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
 
                             @media screen and (min-width: 768px){
                                 font-size: 24px;
@@ -117,6 +128,8 @@ export const FooterStyled = styled.footer`
             justify-content: center;
             align-items: center;
             gap: 5px;
+            transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+            flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
 
             @media screen and (min-width: 768px){
                 font-size: 20px;
@@ -133,6 +146,7 @@ export const FooterStyled = styled.footer`
         right: 10%;
         width: 80px;
         height: auto;
+        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
         @media screen and (min-width: 768px){
             position: static;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const WorksStyled = styled.div`
     position: relative;
     padding-bottom: 120px;
+    transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
 
 
     .work-title-cont{
@@ -19,6 +20,7 @@ export const WorksStyled = styled.div`
            font-size: 48px;
            white-space: nowrap;
            flex-shrink: 0;
+           transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
         }
 
         & .span-before{
@@ -59,6 +61,12 @@ export const WorksStyled = styled.div`
     .work-list{
         color: ${p => p.theme.color.text_color1};
         width: 100%;
+        transform: scaleX(${p => (p.$hebrew ? "-1" : "1")});
+
+
+        @media screen and (min-width: 768px){
+            flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
+        }
 
         & li{
             margin-bottom: 24px;
@@ -70,18 +78,6 @@ export const WorksStyled = styled.div`
 
         & li:last-child{
             margin-bottom: 0;
-
-            @media screen and (min-width: 768px){
-                transform: translateX(53.5%);
-            }
-
-            @media screen and (min-width: 1280px){
-                transform: translateX(52.5%);
-            }
-
-            @media screen and (min-width: 1440px){
-                transform: translateX(60%);
-            }
         }
 
         @media screen and (min-width: 768px){
@@ -124,6 +120,7 @@ export const WorksStyled = styled.div`
                 gap: 14px;
                 align-items: flex-end;
                 margin-bottom: 35px;
+                flex-direction: ${p => p.$hebrew ? "row-reverse" : "row"};
 
                 & span{
                     font-weight: 500;
@@ -142,14 +139,27 @@ export const WorksStyled = styled.div`
                 }
             }
 
+
             & .work-item-text{
                 font-weight: 400;
                 font-size: 16px;
+                text-align: ${p => p.$hebrew ? "right" : "left"};
+                direction: ${p => (p.$hebrew ? "rtl" : "ltr")};
+                unicode-bidi: ${p => (p.$hebrew ? "bidi-override" : "normal")};
 
                 @media screen and (min-width: 1440px){
                     font-size: 20px;
                 } 
             }
+        }
+
+        & .hidden{
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+
+            visibility: hidden;
+            opacity: 0;
         }
     }
 
