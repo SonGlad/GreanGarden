@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GreanGarden/static/css/main.db317afe.css",
-    "main.js": "/GreanGarden/static/js/main.d0625c8f.js",
+    "main.js": "/GreanGarden/static/js/main.12c25125.js",
     "static/js/38.a52544a2.chunk.js": "/GreanGarden/static/js/38.a52544a2.chunk.js",
     "static/media/fog.png": "/GreanGarden/static/media/fog.d4430bf9c58356ebba20.png",
     "static/media/Subtract.png": "/GreanGarden/static/media/Subtract.b806eb2db01001f24beb.png",
@@ -10,6 +10,7 @@
     "static/media/picture3.jpg": "/GreanGarden/static/media/picture3.e94eaf38c2940ceec025.jpg",
     "static/media/svg-back1.png": "/GreanGarden/static/media/svg-back1.2bdfda2068c9bb004d27.png",
     "static/media/Logo2.png": "/GreanGarden/static/media/Logo2.bdd1b9468fd6d72311fe.png",
+    "static/media/Logo.png": "/GreanGarden/static/media/Logo.ed10abde730e39492710.png",
     "static/media/picture7.jpg": "/GreanGarden/static/media/picture7.b1d57507dfb4dd9fdcb4.jpg",
     "static/media/picture5.jpg": "/GreanGarden/static/media/picture5.493156009ca985013090.jpg",
     "static/media/svg-back4.png": "/GreanGarden/static/media/svg-back4.0e4d530fee7cbebf7648.png",
@@ -30,11 +31,11 @@
     "static/media/close.svg": "/GreanGarden/static/media/close.9cb1a87627ef012af4a24f1b68fb9e45.svg",
     "static/media/burger.svg": "/GreanGarden/static/media/burger.fcd5f642cf7711d65bdfd48c01690f8b.svg",
     "main.db317afe.css.map": "/GreanGarden/static/css/main.db317afe.css.map",
-    "main.d0625c8f.js.map": "/GreanGarden/static/js/main.d0625c8f.js.map",
+    "main.12c25125.js.map": "/GreanGarden/static/js/main.12c25125.js.map",
     "38.a52544a2.chunk.js.map": "/GreanGarden/static/js/38.a52544a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db317afe.css",
-    "static/js/main.d0625c8f.js"
+    "static/js/main.12c25125.js"
   ]
 }
